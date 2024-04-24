@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #b88888;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+#play {
+  /* color: #b888; */
+  color: #fff;
+  background-color: aqua;
+}
+.same {
+  background-color: black;
+}
+p ~ h1 {
+  color: red;
+}
+
+.parent {
+  display: flex;
+  justify-content: end;
+}
+
+header img {
+  height: 70px;
+  justify-self: start;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 5vw;
+  align-items: center;
+  flex-wrap: wrap;
+  /* position: fixed; */
+  top: 0;
+  /* width: 100vw; */
+  /* z-index: 10; */
+}
+
+nav {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+}
+nav div {
+  width: 1px;
+  background-color: black;
+}
+
+.moviegrp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: 3vh;
+  position: relative;
+  width: 80%;
+  margin: 10px auto;
+}
+.moviegrp div {
+  width: 30%;
+  background-color: black;
+}
+.moviegrp div img {
+  width: 100%;
+}
+#abs {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  color: blueviolet;
+}
+
+.category {
+  position: relative;
+}
+
+.stay {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+@media (max-width: 576px) {
+  header img {
+    height: 50px;
+    display: none;
+  }
+  header {
+    padding: 10px 2vw;
+  }
+  nav div {
+    width: 1px;
+  }
+  .moviegrp div {
+    width: 45%;
+    background-color: burlywood;
+  }
+}
