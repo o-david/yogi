@@ -87,13 +87,16 @@
     
     // }
     
-    let names = ["sam", "jones", "emma", "muni", "nik"]
+    let names = {
+        indName:"sam", 
+        indAge:22, 
+        location:"Abuja", 
+    }
+    names.indAge
 //     for (const a in names) {
 //     console.log(names[a]);
 // }
 
 names.pop()
 names.pop()
-for (const a of names) {
-        console.log(a);
-}
+let total =0;for (const a of names) {total+=a}
