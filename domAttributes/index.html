@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class=" text-blue-500 font-extrabold">I am cool</h1>
+    <div>
+        <p>first child</p>
+
+    </div>
+    <div class="flex flex-row-reverse justify-start">
+        <span class="cursor-pointer border p-2 rounded-lg bg-slate-500 hover:bg-[green]">click three</span>
+        <span id="two" class="cursor-pointer border p-2 rounded-lg bg-slate-500 hover:bg-[green]">click two</span>
+        <span onclick=changer() class="cursor-pointer border p-2 rounded-lg bg-slate-500 hover:bg-[green]">click one</span>
+    </div>
+
+    <p id="pressed"></p>
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
