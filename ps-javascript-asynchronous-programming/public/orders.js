@@ -15,9 +15,8 @@ Promise.allSettled([statusReq, addressReq, addressTypeReq]).then(([statusRes, ad
   if (statusRes.status === 'fulfilled') {
     statuses = statusRes.value.data
   }
-  else
   addresses = addressRes.value.data
-  nik= addressTypeRes.value.data
+  // nik= addressTypeRes.value.data
 
   
   return axios.get("/api/orders")
