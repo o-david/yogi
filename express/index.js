@@ -1,19 +1,13 @@
-const express = require('express');
-const app = express();
-const port = 4000;
-app.get('/toys', function(req, res){
+const express =require('express')
+const app = express()
+const user =require('./routes/users.js')
 
-    
-    res.end('Hello toys');
-});
-app.get('/game', function(req, res){
-    res.end('Hello World');
-});
-app.get('*', function(req, res){
-    res.end('Hello World');
-});
-app.listen(port, function(){
-  console.log('The server is running, ' +
-      ' please, open your browser at http://localhost:%s', 
-      port);
-});
+app.get("/", (req,res)=>{
+    res.send("<h1>Hello World from Express</h1>")
+})
+
+app.use("/user", user)
+
+app.listen(4003, ()=>{
+    console.log("Server running on port 4003")  // display the server is running on this port
+})
