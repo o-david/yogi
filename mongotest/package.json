@@ -1,17 +1,17 @@
 {
-  "name": "express",
+  "name": "mongotest",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
-    "pug": "^3.0.3"
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.8.0"
   }
 }

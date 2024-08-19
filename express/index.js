@@ -1,13 +1,15 @@
 const express =require('express')
 const app = express()
-const user =require('./routes/users.js')
+
+app.set('view engine', 'pug');
+app.set('views','./views');
+
 
 app.get("/", (req,res)=>{
-    res.send("<h1>Hello World from Express</h1>")
+    res.render("gmc")
+
 })
 
-app.use("/user", user)
-
 app.listen(4003, ()=>{
-    console.log("Server running on port 4003")  // display the server is running on this port
+    console.log("Server running on port http://localhost:4003")  // display the server is running on this port
 })
