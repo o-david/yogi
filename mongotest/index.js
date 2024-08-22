@@ -4,7 +4,7 @@ dotenv.config()
 const uri = process.env.MONGO_URI
 
 const client = new MongoClient(uri)
-const dbname = "Mypeople"
+const castsCollection = client.db("Mypeople").collection("casts")
 
 const connectToDatabase = async() =>{
     try {
@@ -15,9 +15,24 @@ const connectToDatabase = async() =>{
     }
 } 
 
+const cow = [
+    {
+    name:"Bash",
+    age:24,
+    nationality:"Arabian"
+},
+    {
+    name:"Bethel",
+    age:20,
+    nationality:"Kenyan"
+}
+]
+
 const main = async()=>{
     try {
         await connectToDatabase()
+        let result = await castsCollection.findOne({nationality:"Canada"})
+        console.log(result)
     } catch (error) {
         console.error(`Error connecting to database: ${error}`)
     }
