@@ -8,11 +8,23 @@ const main = async()=>{
     await connectdb()
     
     const addCast = new Cast({
-        name: "John Doe",
-        age: 30,
+        name: "John Kev",
+        age: 40,
         nationality: "American"
     })
     
-    addCast.save().then(result => console.log(result)).catch(error => console.error(error))
+    const added = await addCast.save()
 }
-main()
+const main2 = async()=>{
+    await connectdb()
+    
+    const addCast = await Cast.create({
+        name: "Kenny Bev",
+        age: 16,
+        nationality: "Ukrainian"
+    })    
+
+    console.log(addCast);
+
+}
+main2()
