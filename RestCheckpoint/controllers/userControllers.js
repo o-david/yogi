@@ -1,6 +1,7 @@
 import User from "../models/userModel.js"
 
 export const getUsers = async(req,res) => {
+    console.log("searching for users");
     const allUsers = await User.find()
     console.log(allUsers)
     res.json(allUsers)
