@@ -12,9 +12,9 @@ app.use(express.json())
 app.use("/api",router)
 app.use(cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // allow session cookies from browser to pass through
-    allowedHeaders: ["Content-Type", "Authorization"]  // allow these headers to pass through the request and response
+    // methods: ["GET", "POST", "PUT", "DELETE"],
+    // credentials: true, // allow session cookies from browser to pass through
+    // allowedHeaders: ["Content-Type", "Authorization"]  // allow these headers to pass through the request and response
 }))
 
 app.get("/", (req,res)=>{

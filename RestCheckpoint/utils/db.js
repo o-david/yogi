@@ -12,3 +12,17 @@ const connectdb = async()=>{
 }
 
 export default connectdb;
+
+
+let b = 25
+//if b<10 a= "less" else ="greater" 
+let a = (b<10)? (0 || "less") : "greater"
+// if (b<10) {
+//    a= "less" 
+// } else {
+//     a= "greater"
+// }
+
+// (1>2) ? ("klsdks"||"hello") : (90 || 2)
+console.log(a)
+
